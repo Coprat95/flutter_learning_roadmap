@@ -1,0 +1,13 @@
+class IceCream{
+  String flavour;
+  bool sugarFree;
+  double price;
+  String size;
+
+  IceCream(this.flavour,this.sugarFree,this.price,this.size);
+
+  void charge(){
+      String sugarFreeText = sugarFree ? 'sin azúcar' : 'con azúcar';
+      print('El precio del helado de $flavour es de $price. És un helado $sugarFreeText');
+  }
+}

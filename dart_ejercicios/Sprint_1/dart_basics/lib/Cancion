@@ -1,0 +1,21 @@
+import 'dart:io';
+class Cancion {
+  String titulo;
+  String artista;
+  List<String> metadata = ['nombre'];
+
+  Cancion(this.titulo, this.artista);
+  
+  void reproducir() {
+    print('Reproduciendo $titulo de $artista');
+  }
+  
+  void anyadirCancionAPlaylist(){
+    print('Introduzca nombre y artista de cancion a añadir a playlist');
+    String nombre = stdin.readLineSync()!;
+    String artista = stdin.readLineSync()!;
+    metadata.addAll({'nombre': nombre, 'artista': artista});
+    print('Canción añadida a playlist: ${metadata['nombre']} de ${metadata['artista']}');
+    print(metadata);
+  }
+}

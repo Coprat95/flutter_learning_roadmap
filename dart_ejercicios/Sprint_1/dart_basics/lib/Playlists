@@ -1,0 +1,11 @@
+class Playlists {
+  String name;
+  List<Cancion> songs;
+  Playlists(this.name, this.songs);
+
+  void addSong(Cancion song) {
+    songs.add(song);
+    print('Canción añadida a la playlist $name: ${song.titulo} de ${song.artista}');
+    print(songs);
+  }
+}
